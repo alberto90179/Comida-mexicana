@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedidos Individuales - Comida Mexicana</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>¡Sabores Mexicanos!</h1>
+            <p class="header-subtitle">Pedidos individuales por persona</p>
+        </header>
+
+        <div class="instructions">
+            <p><i class="fas fa-info-circle"></i> Máximo 5 personas. Cada persona puede pedir hasta 10 unidades de cada producto.</p>
+        </div>
+
+        <div class="customer-info">
+            <div class="form-group">
+                <label for="people-count"><i class="fas fa-users"></i> Número de personas:</label>
+                <div class="people-counter">
+                    <button class="people-btn" id="decrease-people">-</button>
+                    <input type="number" class="people-input" id="people-count" value="1" min="1" max="5">
+                    <button class="people-btn" id="increase-people">+</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="people-sections">
+            <!-- Secciones de personas se generarán aquí -->
+        </div>
+
+        <div class="actions">
+            <button class="btn btn-calculate" id="calculate-btn">
+                <i class="fas fa-calculator"></i> Calcular Total
+            </button>
+            <button class="btn btn-whatsapp" id="whatsapp-btn">
+                <i class="fab fa-whatsapp"></i> Enviar por WhatsApp
+            </button>
+            <button class="btn btn-reset" id="reset-btn">
+                <i class="fas fa-redo"></i> Reiniciar Todo
+            </button>
+        </div>
+
+        <div class="order-summary">
+            <h2 class="summary-title"><i class="fas fa-receipt"></i> Resumen General del Pedido</h2>
+            <div id="order-items">
+                <p class="empty-message">El resumen aparecerá aquí</p>
+            </div>
+            <div class="total">
+                <span>Total a pagar:</span>
+                <span id="total-amount">$0.00</span>
+            </div>
+        </div>
+
+        <footer>
+            <p>© 2023 Sabores Mexicanos - Todos los derechos reservados</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
